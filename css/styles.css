@@ -3,6 +3,9 @@ body {
   text-align: center;
   margin: 16px;
   width: 1280px;
+  margin: 0 auto;
+  
+  
 }
 
 /* * {
@@ -59,15 +62,16 @@ body {
   background: #0b7dda;
 }
 .gallery {
-    align-items: stretch;
-  display: flex;
+    display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
   align-items: stretch;
+  margin-right: auto;
+  margin-left: auto;
+  
  
 }
 /* .gallery{
