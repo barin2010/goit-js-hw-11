@@ -1,16 +1,17 @@
+:root {
+  --primary-color-light: #f1f1f1;
+  --color-button: #2196f3;
+  --color-butten-hover: #0b7dda;
+}
+
 body {
-  font-family: Arial;
   text-align: center;
   margin: 16px;
   width: 1280px;
   margin: 0 auto;
-  
-  
+  font-family: 'Times New Roman', Times, sans-serif;
+  font-size: 16px;
 }
-
-/* * {
-  box-sizing: border-box;
-} */
 
 .search-form {
   display: flex;
@@ -26,7 +27,7 @@ body {
   border-right: none;
   float: left;
   width: 80%;
-  background: #f1f1f1;
+  background: var(--primary-color-light);
   margin: 0 auto;
 }
 
@@ -34,22 +35,23 @@ body {
   float: left;
   width: 20%;
   padding: 10px;
-  background: #2196f3;
-  color: white;
+  background: var(--color-button);
+  color: var(--primary-color-light);
   font-size: 17px;
   border: 1px solid grey;
   border-left: none;
   cursor: pointer;
 }
 .search-form button:hover {
-  background: #0b7dda;
+  background: var(--color-butten-hover);
 }
 
 .load-more {
+  display: none;
   width: 20%;
   padding: 10px;
-  background: #2196f3;
-  color: white;
+  background: var(--color-button);
+  color: var(--primary-color-light);
   font-size: 17px;
   border: 1px solid grey;
   border-radius: 5px;
@@ -59,10 +61,10 @@ body {
 }
 
 .load-more:hover {
-  background: #0b7dda;
+  background: var(--color-butten-hover);
 }
 .gallery {
-    display: flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   gap: 10px;
@@ -71,26 +73,10 @@ body {
   align-items: stretch;
   margin-right: auto;
   margin-left: auto;
-  
- 
 }
-/* .gallery{
-    display: grid;
-  max-width: 1140px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-auto-rows: 240px;
-  grid-gap: 12px;
-  justify-content: center;
-  padding: 0;
-  list-style: none;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 .photo-card {
-    
-   
- width: calc((100% - 30px)/4);
+  width: calc((100% - 30px) / 4);
   display: flex;
   flex-direction: column;
   padding: 5px;
@@ -110,7 +96,6 @@ body {
 .info {
   display: flex;
   justify-content: center;
-  
 }
 .info p {
   display: flex;
@@ -118,5 +103,4 @@ body {
   font-size: 12px;
   justify-content: center;
   padding: 0 10px;
- 
 }
