@@ -46,7 +46,6 @@ body {
 }
 
 .load-more {
-  display: none;
   width: 20%;
   padding: 10px;
   background: var(--color-button);
