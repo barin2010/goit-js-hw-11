@@ -10,7 +10,7 @@ const form = document.getElementById("search-form");
 const gallery = document.querySelector(".gallery");
 const loadMoreBtn = document.querySelector(".load-more");
 let page = 1; 
-const perPage = 100; 
+const perPage = 40; 
 let isLargeImage = false;
 
 loadMoreBtn.style.display = "none";
@@ -31,10 +31,9 @@ form.addEventListener("submit", async (e) => {
   } catch (error) {
     console.error("An error occurred:", error);
     Notiflix.Notify.failure("Sorry, something went wrong. Please try again later.");
-    loadMoreBtn.style.display = "none"; // Set display to none on error
-  }
+    loadMoreBtn.style.display = "none"; 
+};
 });
-
 loadMoreBtn.addEventListener("click", async () => {
   page++;
   const searchQuery = form.searchQuery.value;
@@ -44,7 +43,7 @@ loadMoreBtn.addEventListener("click", async () => {
   } catch (error) {
     console.error("An error occurred:", error);
     Notiflix.Notify.failure("Sorry, something went wrong. Please try again later.");
-    loadMoreBtn.style.display = "none"; // Set display to none on error
+    loadMoreBtn.style.display = "none"; 
   }
 });
 
@@ -80,7 +79,7 @@ function renderImages(data) {
       loadMoreBtn.style.display = "block";
     }
   } else {
-    // gallery.innerHTML = "Sorry, there are no images matching your search query. Please try again.";
+    gallery.innerHTML = "Sorry, there are no images matching your search query. Please try again.";
     Notiflix.Notify.warning("Sorry, there are no images matching your search query. Please try again.");
     loadMoreBtn.style.display = "none";
   }
@@ -141,4 +140,5 @@ function renderImageCard(image) {
   card.appendChild(link); 
   card.appendChild(info);
   gallery.appendChild(card);
-}
+};
+
